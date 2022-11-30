@@ -42,7 +42,11 @@ stereo: 50,
 // You just returned home to find your mansion has been robbed! Given an object of the stolen items,
 // log the total amount of the burglary (number).
 // If nothing was robbed, return the string "Lucky you!".
-console.log(stolenItems.tv + stolenItems.skate + stolenItems.stereo);
+let sum = 0;
+for (const x in stolenItems) {
+    sum += stolenItems[x];
+}
+console.log(sum);
 
 // exe 5
 // A factor chain is an array where each previous element is a factor of the next consecutive element. The following is a factor chain:
@@ -57,7 +61,7 @@ for (let i = 0; i < arr8.length - 1; i++) {
         console.log("array is not a factor chain");
         break;
     }
-    if (i == 2) {
+    if (i == arr8.length - 2) {
         console.log("array is a factor chain")
     }
 }
